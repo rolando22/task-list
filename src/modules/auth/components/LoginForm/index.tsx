@@ -4,7 +4,7 @@ import { Eye, EyeInvisible } from '@/modules/core/components/Icons';
 
 import { Loader } from '@/modules/core/components';
 
-import { useUser } from '@/modules/auth/hooks/useUser';
+import { useLogin } from '@/modules/auth/hooks/useLogin';
 import { LoginSchema } from '@/modules/auth/schemas';
 
 import type { Login } from '@/modules/auth/types';
@@ -12,7 +12,7 @@ import type { Login } from '@/modules/auth/types';
 export function LoginForm() {
 	const [showPassword, setShowPassword] = useState<boolean>(false);
 
-	const { isLoading, login } = useUser();
+	const { isLoading, login } = useLogin();
 
 	const formik = useFormik({
 		initialValues: {

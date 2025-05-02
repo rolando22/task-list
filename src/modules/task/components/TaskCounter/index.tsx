@@ -1,14 +1,15 @@
 import { useTasksContext, useUserContext } from '@/context';
-import { useUser } from '@/modules/auth/hooks/useUser';
+import { useLogout } from '@/modules/auth/hooks/useLogout';
 
 export function TaskCounter() {
 	const { user } = useUserContext();
-	const { logout } = useUser();
 	const { tasks } = useTasksContext();
+
+	const { logout } = useLogout();
 
 	const completed = tasks.reduce((total, task) => task.completed ? total += 1 : total, 0);
 
-	const handlerOnClickLogout = () =>  logout();
+	const handlerOnClickLogout = () => logout();
 
 	return (
 		<>

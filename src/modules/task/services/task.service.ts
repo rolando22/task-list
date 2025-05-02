@@ -35,7 +35,7 @@ export const taskService = {
 
 		return tasks;
 	},
-	create: async (newTask: Task) => {
+	create: async (newTask: Pick<Task, 'title' | 'description' | 'completed' | 'userId'>) => {
 		const token = tokenService.get();
 		const response = await fetch(`${apiUrl}/api/tasks`, {
 			method: 'POST',

@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { toast } from 'sonner';
 
 import { useUserContext } from '@/context';
-import { useUser } from '@/modules/auth/hooks/useUser';
 import { useTaskStore } from '@/modules/task/hooks/useTaskStore';
 import { taskService } from '@/modules/task/services/task.service';
 
@@ -11,8 +10,6 @@ export function useAddTask() {
   
 	const { user } = useUserContext();
 	const { addTaskStore } = useTaskStore();
-  
-	const { logout } = useUser();
 
 	const addTask = async (title: string, description: string) => {
 		try {
@@ -23,7 +20,6 @@ export function useAddTask() {
 		} catch (error) {
 			if (error instanceof Error) toast.error(error.message);
 			console.log(error);
-			logout();
 		} finally {
 			setIsLoading(false);
 		}

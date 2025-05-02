@@ -1,0 +1,65 @@
+[
+  {
+    "id": "82bb3d27-bb04-412b-8893-b712cbf85755",
+    "title": "Contribute code or a monetary donation to an open-source software project",
+    "description": "Lorem ipsum",
+    "completed": false,
+    "createdAt": "2024-12-27",
+    "updatedAt": "2024-12-27",
+    "userId": "1"
+  },
+  {
+    "id": "2bf878de-1527-4832-b9e8-f8c20fc0ebad",
+    "title": "Go see a Broadway production",
+    "description": "Lorem ipsum",
+    "completed": false,
+    "createdAt": "2024-12-27",
+    "updatedAt": "2024-12-27",
+    "userId": "1"
+  },
+  {
+    "id": "45c96563-4627-48ef-87b8-99c545f45a34",
+    "title": "Have a football scrimmage with some friends",
+    "description": "Lorem ipsum",
+    "completed": false,
+    "createdAt": "2024-12-27",
+    "updatedAt": "2024-12-27",
+    "userId": "1"
+  },
+  {
+    "id": "6e331a64-2e63-4d86-8c75-3272c7b98631",
+    "title": "Buy a new house decoration",
+    "description": "Lorem ipsum",
+    "completed": false,
+    "createdAt": "2024-12-27",
+    "updatedAt": "2024-12-27",
+    "userId": "1"
+  },
+  {
+    "id": "d2cc26a5-07c0-4524-a692-b5c2b09c5bb6",
+    "title": "Research a topic interested in",
+    "description": "Lorem ipsum",
+    "completed": false,
+    "createdAt": "2024-12-27",
+    "updatedAt": "2024-12-30",
+    "userId": "1"
+  },
+  {
+    "id": "9faeeea1-0961-48cb-95fc-428e622140ba",
+    "title": "Learn Express.js",
+    "description": "Lorem ipsum",
+    "completed": false,
+    "createdAt": "2024-12-27",
+    "updatedAt": "2024-12-30",
+    "userId": "1"
+  },
+  {
+    "id": "d42602f3-6c80-4b73-8b72-3355e4efa67b",
+    "title": "Go to the gym",
+    "description": "Lorem ipsum",
+    "completed": false,
+    "createdAt": "2024-12-27",
+    "updatedAt": "2024-12-30",
+    "userId": "1"
+  }
+]

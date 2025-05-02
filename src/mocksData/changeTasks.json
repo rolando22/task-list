@@ -1,0 +1,12 @@
+{
+  "message": "Task updated",
+  "data": {
+    "id": "d42602f3-6c80-4b73-8b72-3355e4efa67b",
+    "title": "Go to the gym",
+    "description": "Lorem ipsum",
+    "completed": false,
+    "createdAt": "2024-12-27",
+    "updatedAt": "2024-12-30",
+    "userId": "1"
+  }
+}

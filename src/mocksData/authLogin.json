@@ -1,0 +1,14 @@
+{
+  "user": {
+    "id": "1",
+    "firstName": "Terry",
+    "lastName": "Medhurst",
+    "email": "atuny0@sohu.com",
+    "username": "atuny0",
+    "password": "9uQFF1Lh",
+    "image": "https://robohash.org/hicveldicta.png",
+    "createdAt": "2024-12-27",
+    "updatedAt": "2024-12-27"
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6ImF0dW55MCIsImlhdCI6MTczNTUzMDA5NCwiZXhwIjoxODIxOTMwMDk0fQ.WE1THcn7Gey9NY7Q_qnyWZnI_scMZLVzGAJRAQDh9Dk"
+}

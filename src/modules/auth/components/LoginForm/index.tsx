@@ -4,7 +4,7 @@ import { Eye, EyeInvisible } from '@/modules/core/components/Icons';
 
 import { Loader } from '@/modules/core/components';
 
-import { useLogin } from '@/modules/auth/hooks/useLogin';
+import { useLogin } from '@/modules/auth/hooks';
 import { LoginSchema } from '@/modules/auth/schemas';
 
 import type { Login } from '@/modules/auth/types';
@@ -32,7 +32,7 @@ export function LoginForm() {
 	return (
 		<div className={`grid justify-center gap-3 h-screen ${isLoading ? 'opacity-70' : ''}`}>
 			<h1 className='font-medium text-xl text-center self-center'>Welcome</h1>
-			<form className='flex flex-col gap-4 w-80' onSubmit={formik.handleSubmit}>
+			<form role='form' className='flex flex-col gap-4 w-80' onSubmit={formik.handleSubmit}>
 				<div className='flex flex-col gap-1'>
 					<label htmlFor='email' className='font-light text-sm'>Email:</label>
 					<input 
@@ -58,7 +58,10 @@ export function LoginForm() {
 							onChange={formik.handleChange}
 						/>
 						<button className="absolute right-5 top-3" type="button" onClick={toggleShowPassword}>
-							{showPassword ? <EyeInvisible className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+							{showPassword
+								? <EyeInvisible data-testid='eye-invisible-icon' className="w-5 h-5" />
+								: <Eye data-testid='eye-icon' className="w-5 h-5" />
+							}
 						</button>
 					</div>
 					{formik.touched.password && <span className='text-red-500 text-sm'>{formik.errors.password}</span>}

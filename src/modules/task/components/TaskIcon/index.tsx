@@ -14,14 +14,16 @@ const iconTypes: IconType = {
 };
 
 interface TaskIconProps {
+	['data-testid']?: string
 	type: 'check' | 'delete' | 'edit'
 	color: string
 	onClick: () => void
 }
 
-export function TaskIcon({ type, color, onClick }: TaskIconProps) {
+export function TaskIcon({ type, color, onClick, ['data-testid']: dataTestId }: TaskIconProps) {
 	return (
 		<span
+			data-testid={dataTestId}
 			className={`
 				cursor-pointer flex justify-center items-center h-12 w-12 text-2xl font-bold 
 				${type === 'check' ? 'absolute left-1' : ''}
@@ -36,13 +38,15 @@ export function TaskIcon({ type, color, onClick }: TaskIconProps) {
 }
 
 interface CompleteIconProps {
+	['data-testid']?: string
 	completed: boolean
 	onComplete: () => void
 }
 
-export function CompleteIcon({ completed, onComplete }: CompleteIconProps) {
+export function CompleteIcon({ completed, onComplete, ['data-testid']: dataTestId }: CompleteIconProps) {
 	return (
 		<TaskIcon 
+			data-testid={dataTestId}
 			type='check'
 			color={`${completed ? '#47c2be' : '#5e6b78'}`}
 			onClick={onComplete}
@@ -51,12 +55,14 @@ export function CompleteIcon({ completed, onComplete }: CompleteIconProps) {
 }
 
 interface DeleteIconProps {
+	['data-testid']?: string
 	onDelete: () => void
 }
 
-export function DeleteIcon({ onDelete }: DeleteIconProps) {
+export function DeleteIcon({ onDelete, ['data-testid']: dataTestId }: DeleteIconProps) {
 	return (
 		<TaskIcon 
+			data-testid={dataTestId}
 			type='delete'
 			color='#5e6b78'
 			onClick={onDelete}
@@ -65,12 +71,14 @@ export function DeleteIcon({ onDelete }: DeleteIconProps) {
 }
 
 interface EditIconProps {
+	['data-testid']?: string
 	onEdit: () => void
 }
 
-export function EditIcon({ onEdit }: EditIconProps) {
+export function EditIcon({ onEdit, ['data-testid']: dataTestId }: EditIconProps) {
 	return (
 		<TaskIcon
+			data-testid={dataTestId}
 			type='edit'
 			color='#5e6b78'
 			onClick={onEdit}

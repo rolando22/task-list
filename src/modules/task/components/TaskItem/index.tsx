@@ -19,6 +19,7 @@ export function TaskItem({ id, title, description, completed, onMutateDeleteTask
 	return (
 		<li className='rounded-xl bg-[#293143] relative flex flex-col justify-center items-center gap-2 mt-6 py-6'>
 			<CompleteIcon 
+				data-testid='complete-icon'
 				completed={completed} 
 				onComplete={onMutateToggleCompletedTask} 
 			/>
@@ -34,8 +35,8 @@ export function TaskItem({ id, title, description, completed, onMutateDeleteTask
 				`}>
 				{description}
 			</p>
-			<EditIcon onEdit={handlerToggleEditTask} /> 
-			<DeleteIcon onDelete={onMutateDeleteTask({ id })} />
+			<EditIcon data-testid='edit-icon' onEdit={handlerToggleEditTask} /> 
+			<DeleteIcon data-testid='delete-icon' onDelete={onMutateDeleteTask({ id })} />
 		</li>
 	);
 }

@@ -8,7 +8,7 @@ export interface Task {
   title: string 
   description: string
   completed: boolean 
-  creadtedAt?: string
+  createdAt?: string
   updatedAt?: string
   userId?: User['id']
 }

@@ -1,4 +1,4 @@
-import type LoginResponse from '@/mocks/authLogin.json';
+import type LoginResponse from '@/mocksData/authLogin.json';
 
 import type { UserState } from '@/types';
 

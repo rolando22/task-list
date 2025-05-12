@@ -1,11 +1,11 @@
 import { describe, it, expect, beforeEach, afterEach, vi, Mock } from 'vitest';
 import { act, renderHook, RenderHookResult, waitFor } from '@testing-library/react';
+import { toast } from 'sonner';
 
 import { useEditTask } from './useEditTask';
 import { taskService } from '@/modules/task/services/task.service';
 import { useUserContext } from '@/context';
 import { useTaskStore } from './useTaskStore';
-import { toast } from 'sonner';
 
 vi.mock('sonner', () => ({
 	toast: {
